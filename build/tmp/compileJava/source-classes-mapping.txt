@@ -1,0 +1,20 @@
+com/example/consts/DgsConstants.java
+ com.example.consts.DgsConstants
+ com.example.consts.DgsConstants$QUERY
+ com.example.consts.DgsConstants$SHOW
+com/example/types/Show.java
+ com.example.types.Show
+ com.example.types.Show$Builder
+com/example/client/ShowsGraphQLQuery.java
+ com.example.client.ShowsGraphQLQuery
+ com.example.client.ShowsGraphQLQuery$Builder
+com/example/client/ShowsProjectionRoot.java
+ com.example.client.ShowsProjectionRoot
+com/example/DemoApplication.java
+ com.example.DemoApplication
+com/example/DgsConstants.java
+ com.example.DgsConstants
+ com.example.DgsConstants$QUERY
+ com.example.DgsConstants$SHOW
+com/example/fetchers/ShowsDataFetcher.java
+ com.example.fetchers.ShowsDataFetcher

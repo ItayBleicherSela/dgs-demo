@@ -1,0 +1,30 @@
+plugins {
+    id "com.netflix.dgs.codegen" version "4.6.6"
+    id "org.springframework.boot" version "2.4.6"
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:latest.release"))
+    implementation "com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter"
+    implementation "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-gradle:latest.release"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+
+
+}
+generateJava {
+    schemaPaths = ["${projectDir}/src/main/resources/schema"] // List of directories containing schema files
+    packageName = 'com.example' // The package name to use to generate sources
+    generateClient = true // Enable generating the type safe query API
+    language = 'java'
+    subPackageNameDatafetchers = 'datafetcher'
+}
+
